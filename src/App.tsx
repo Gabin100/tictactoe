@@ -12,7 +12,11 @@ function App() {
   const checkingWinnerHandler = () => {
     // Check rows for a winner
     for (let i = 0; i < 3; i++) {
-      if (matrix[i][0] === matrix[i][1] && matrix[i][1] === matrix[i][2]) {
+      if (
+        matrix[i][0] &&
+        matrix[i][0] === matrix[i][1] &&
+        matrix[i][1] === matrix[i][2]
+      ) {
         return matrix[i][0];
       }
     }
