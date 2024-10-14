@@ -23,7 +23,7 @@ function App() {
         matrix[0][i] === matrix[1][i] &&
         matrix[1][i] === matrix[2][i]
       ) {
-        return matrix[0][i]; // Return 'X' or 'O' as the winner
+        return matrix[0][i];
       }
     }
 
@@ -33,7 +33,7 @@ function App() {
       matrix[0][0] === matrix[1][1] &&
       matrix[1][1] === matrix[2][2]
     ) {
-      return matrix[0][0]; // Return 'X' or 'O' as the winner
+      return matrix[0][0];
     }
 
     if (
@@ -41,7 +41,7 @@ function App() {
       matrix[0][2] === matrix[1][1] &&
       matrix[1][1] === matrix[2][0]
     ) {
-      return matrix[0][2]; // Return 'X' or 'O' as the winner
+      return matrix[0][2];
     }
 
     // If no winner, return null
