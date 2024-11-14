@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
 import ImageDetection from './facedetection';
+import SocketClient from './socketClient';
+import { SocketProvider } from './SocketContext';
 
 function App() {
   const ToCaptureRef = useRef<HTMLInputElement>(null); // ref
@@ -159,9 +161,12 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='rounded overflow-hidden shadow-lg'>
+      {/* <div className='rounded overflow-hidden shadow-lg'>
         <ImageDetection />
-      </div>
+      </div> */}
+      <SocketProvider>
+        <SocketClient />
+      </SocketProvider>
     </div>
   );
 }
