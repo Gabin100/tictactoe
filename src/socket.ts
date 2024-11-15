@@ -21,7 +21,7 @@ class SocketConnection {
   private socket: SocketIOClient.Socket;
 
   private constructor() {
-    this.socket = io('http://localhost:4500');
+    this.socket = io('http://localhost:6200');
   }
 
   public static getInstance(): SocketConnection {
