@@ -21,7 +21,9 @@ class SocketConnection {
   private socket: SocketIOClient.Socket;
 
   private constructor() {
-    this.socket = io('http://localhost:6200');
+    this.socket = io('http://localhost:6200', {
+      path: '/rebmis_live',
+    });
   }
 
   public static getInstance(): SocketConnection {

@@ -6,7 +6,9 @@ import io from 'socket.io-client';
 export const SocketContext = createContext<SocketIOClient.Socket | null>(null);
 
 export const SocketProvider = ({ children }: { children: ReactNode }) => {
-  const socket: SocketIOClient.Socket = io('http://localhost:6200');
+  const socket: SocketIOClient.Socket = io('http://localhost:6200', {
+    path: '/rebmis_live',
+  });
 
   return (
     <SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
